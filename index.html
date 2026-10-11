@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Soraya’s Childcare — Home daycare in Bee Cave</title>
+  <meta name="description" content="Preview for Soraya’s Childcare, a home daycare in Bee Cave, Texas. The page follows the layout of Binish Montessori." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --green: #4a7c59;
+      --deep: #2d5a3d;
+      --ink: #2c2c2c;
+      --mist: #f1f8f4;
+      --line: #d5e6db;
+      --hero: #8eaf86;
+      --muted: #5d6b62;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #fff;
+      font-family: Inter, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    img, svg { display: block; max-width: 100%; }
+
+    .preview-bar {
+      background: var(--deep);
+      color: #f3f8f4;
+      text-align: center;
+      font-size: 0.82rem;
+      padding: 0.55rem 1rem;
+    }
+
+    .wrap { width: min(1080px, calc(100% - 2.4rem)); margin: 0 auto; }
+
+    header.site {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: #fff;
+      border-bottom: 1px solid rgba(74, 124, 89, 0.12);
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 74px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+      color: var(--green);
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+    }
+    .monogram {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1.5px solid var(--green);
+      display: grid;
+      place-items: center;
+      font-family: "Playfair Display", Georgia, serif;
+      font-style: italic;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.15rem;
+    }
+    nav a { text-decoration: none; font-size: 0.98rem; }
+    nav a:hover { color: var(--green); }
+    .phone { display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none; }
+    .book {
+      background: var(--deep);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 0.72rem 1.15rem;
+      font-weight: 500;
+    }
+    .book.light {
+      background: transparent;
+      color: var(--deep);
+      border: 1.5px solid rgba(45, 90, 61, 0.45);
+    }
+    .book:hover { filter: brightness(1.08); }
+    .book { white-space: nowrap; flex: none; }
+
+    .hero {
+      background:
+        radial-gradient(circle at 50% 38%, rgba(255,255,255,0.18) 0 78px, transparent 79px),
+        radial-gradient(circle at 50% 38%, transparent 0 118px, rgba(255,255,255,0.28) 119px 120px, transparent 121px),
+        radial-gradient(circle at 50% 38%, transparent 0 168px, rgba(255,255,255,0.2) 169px 170px, transparent 171px),
+        var(--hero);
+      color: var(--deep);
+      text-align: center;
+      padding: 5.2rem 1.2rem 4.6rem;
+    }
+    .hero .monogram {
+      margin: 0 auto 1.2rem;
+      width: 74px;
+      height: 74px;
+      font-size: 2rem;
+      background: rgba(255,255,255,0.28);
+    }
+    .hero h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.3rem, 5vw, 3.5rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      max-width: 16ch;
+      margin: 0 auto 1rem;
+    }
+    .hero p { max-width: 38rem; margin: 0 auto 0.8rem; font-size: 1.05rem; }
+    .pin { color: var(--deep); font-weight: 500; }
+    .hero-actions { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.4rem; }
+
+    section { padding: 4.2rem 0; }
+    .center { text-align: center; }
+    h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      color: var(--green);
+      margin: 0 0 0.4rem;
+      letter-spacing: -0.02em;
+    }
+    .subhead { color: var(--muted); margin: 0 0 1rem; }
+    .prose { max-width: 44rem; margin: 0 auto 1.4rem; color: #3a3a3a; }
+    .center .prose { text-align: center; }
+
+    .trio, .six, .rates {
+      display: grid;
+      gap: 1rem;
+    }
+    .trio { grid-template-columns: repeat(3, 1fr); margin-top: 1.6rem; }
+    .six { grid-template-columns: repeat(3, 1fr); }
+    .card, .price, .program {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+      padding: 1.25rem 1.2rem 1.3rem;
+    }
+    .card h3, .program h3, .price h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      color: var(--green);
+      margin: 0 0 0.35rem;
+      font-size: 1.35rem;
+    }
+    .card p, .program p { margin: 0; color: #3a3a3a; }
+
+    .meet {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 2rem;
+      align-items: center;
+      background: var(--mist);
+      border-radius: 24px;
+      padding: 1.6rem;
+    }
+    .portrait {
+      background: #fff;
+      border-radius: 18px;
+      min-height: 320px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 1.5rem;
+      border: 1px solid var(--line);
+    }
+    .portrait .monogram { width: 92px; height: 92px; font-size: 2.4rem; margin: 0 auto 0.8rem; }
+    .portrait strong { display: block; font-family: "Playfair Display", Georgia, serif; font-size: 1.4rem; color: var(--green); }
+    .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    .chips span {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.3rem 0.7rem;
+      font-size: 0.88rem;
+    }
+    .meet h3 { font-family: "Playfair Display", Georgia, serif; color: var(--deep); margin: 0.8rem 0 0.3rem; font-size: 1.25rem; }
+    .meet p { margin: 0 0 0.7rem; }
+
+    .program {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.2rem;
+      align-items: start;
+    }
+    .program ul, .price ul { margin: 0.6rem 0 0; padding-left: 1.1rem; }
+    .program li, .price li { margin: 0.28rem 0; }
+    .ages { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+    .age { background: var(--mist); border-radius: 14px; padding: 0.9rem 1rem; }
+    .age b { display: block; color: var(--deep); }
+    .age span { color: var(--muted); font-size: 0.92rem; }
+
+    .clock {
+      list-style: none;
+      margin: 1.2rem 0 0;
+      padding: 0.3rem 1.2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2rem;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+    .clock li {
+      display: grid;
+      grid-template-columns: 4.4rem 1fr;
+      gap: 0.7rem;
+      padding: 0.8rem 0;
+      border-top: 1px solid var(--line);
+    }
+    .clock li:nth-child(1), .clock li:nth-child(2) { border-top: 0; }
+    .clock time { color: var(--green); font-weight: 600; }
+    .clock strong { display: block; }
+    .clock span { color: var(--muted); font-size: 0.92rem; }
+    .credit { color: var(--muted); font-size: 0.9rem; margin: 0.8rem 0 0; }
+
+    #tuition { background: var(--mist); }
+    .rates { grid-template-columns: 1.15fr 0.85fr 0.85fr; align-items: start; }
+    .price .when { color: var(--muted); margin: 0; }
+    .price .amount {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 2.4rem;
+      margin: 0.8rem 0 0;
+      letter-spacing: -0.03em;
+    }
+    .price .per { color: var(--muted); margin: 0 0 0.8rem; }
+    .note {
+      max-width: 46rem;
+      margin: 1.2rem auto 0;
+      text-align: center;
+      color: #3a3a3a;
+    }
+
+    .faq { display: grid; gap: 0.55rem; max-width: 760px; margin: 1.2rem auto 0; text-align: left; }
+    .faq details { border: 1px solid var(--line); border-radius: 14px; padding: 0.85rem 1rem; background: #fff; }
+    .faq summary { cursor: pointer; font-weight: 600; }
+    .faq p { margin: 0.55rem 0 0; color: #3a3a3a; }
+
+    .visit {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    footer.site {
+      background: var(--deep);
+      color: #e7f2ea;
+      padding: 2.4rem 0 1.4rem;
+    }
+    .foot {
+      display: grid;
+      grid-template-columns: 1.4fr 0.7fr 1fr;
+      gap: 1.5rem;
+    }
+    footer h3, footer h4 { margin: 0 0 0.5rem; font-family: "Playfair Display", Georgia, serif; color: #fff; }
+    footer a { color: #e7f2ea; }
+    footer ul { list-style: none; margin: 0; padding: 0; }
+    footer li { margin: 0.3rem 0; }
+    .legal {
+      border-top: 1px solid rgba(255,255,255,0.15);
+      margin-top: 1.5rem;
+      padding-top: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.88rem;
+      color: #c9dece;
+    }
+    .tag {
+      display: inline-block;
+      margin-left: 0.4rem;
+      font-family: Inter, sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--deep);
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.1rem 0.45rem;
+      vertical-align: 0.2em;
+    }
+
+    @media (max-width: 860px) {
+      .hide-sm { display: none; }
+      .brand { font-size: 1.05rem; }
+      .book { padding: 0.55rem 0.85rem; font-size: 0.9rem; }
+      .trio, .six, .rates, .meet, .program, .clock, .visit, .foot, .ages { grid-template-columns: 1fr; }
+      .clock li:nth-child(2) { border-top: 1px solid var(--line); }
+      .hero { padding: 3.4rem 1rem 3rem; }
+      .bar { min-height: 64px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-bar">
+    Overview preview. Layout, program card, and tuition cards follow <strong>binishmontessori.com</strong>. Soraya’s hours, address, and reviews are hers. Prices and Montessori claims from that site are not copied here.
+  </div>
+
+  <header class="site">
+    <div class="wrap bar">
+      <a class="brand" href="#top"><span class="monogram">S</span> Soraya’s Childcare</a>
+      <nav aria-label="Page">
+        <a class="hide-sm" href="#about">About</a>
+        <a class="hide-sm" href="#program">Program</a>
+        <a class="hide-sm" href="#tuition">Tuition</a>
+        <a class="phone hide-sm" href="tel:+15122637379">☎ (512) 263-7379</a>
+        <a class="book" href="#visit">Book a tour</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="monogram" aria-hidden="true">S</div>
+      <h1>A home in Bee Cave where children are known.</h1>
+      <p>Warm childcare in a real house, for infants through school age. Small on purpose, so the day can slow down around each child.</p>
+      <p class="pin">Home daycare on Portola Court, Bee Cave</p>
+      <div class="hero-actions">
+        <a class="book" href="#visit">Book a tour</a>
+        <a class="book light" href="#program">See the program</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="center">
+          <h2>About Soraya’s Childcare</h2>
+          <p class="subhead">A family day home in Bee Cave</p>
+          <p class="prose">Soraya Pourrajabi has cared for children in this house since 1996. Listings describe it as a home away from home: twelve children at most, from infants through school age, with attention a large center cannot give.</p>
+        </div>
+        <div class="trio">
+          <article class="card">
+            <h3>Home environment</h3>
+            <p>A house on Portola Court, not a hallway of classrooms. Parents call it safe, clean, and welcoming.</p>
+          </article>
+          <article class="card">
+            <h3>Experienced caregiver</h3>
+            <p>Families describe Mrs. Soraya as a teacher, a mother, and a grandmother. The home has been hers since 1996.</p>
+          </article>
+          <article class="card">
+            <h3>Child-centered</h3>
+            <p>Reviews mention personal help with eating, writing, and reading, plus kindness on the rough mornings.</p>
+          </article>
+        </div>
+
+        <div class="meet" style="margin-top:2rem">
+          <div class="portrait">
+            <div>
+              <div class="monogram">S</div>
+              <strong>Soraya Pourrajabi</strong>
+              <span>Director since 1996</span>
+            </div>
+          </div>
+          <div>
+            <p class="subhead" style="margin:0">Your caregiver in Bee Cave</p>
+            <h2 style="font-size:2rem">Meet Soraya Pourrajabi</h2>
+            <p>She has directed this home since 1996. Parents describe a teacher who is also a mother and a grandmother, steady on the mornings when a child is having a hard start.</p>
+            <h3>In a parent’s words</h3>
+            <p>“She loves the children deeply, and her compassion eases my mind on the rough days. Kindness, manners, respect, and thankfulness live in her classroom.” — Krista L., 2015</p>
+            <div class="chips">
+              <span>Since 1996</span>
+              <span>Up to 12 children</span>
+              <span>Weekdays 7:30–5:30</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach" style="background:var(--mist)">
+      <div class="wrap">
+        <div class="center">
+          <h2>Our approach</h2>
+          <p class="prose">Respect, a prepared house, hands-on learning, time to settle, mixed ages, and room to grow.</p>
+        </div>
+        <div class="six">
+          <article class="card">
+            <h3>Respect for the child</h3>
+            <p>Parents name kindness, manners, respect, and thankfulness as part of the day, not a poster on the wall.</p>
+          </article>
+          <article class="card">
+            <h3>Prepared environment</h3>
+            <p>A clean, safe house, set up so children can move, eat, and play without a lobby or a long hallway.</p>
+          </article>
+          <article class="card">
+            <h3>Hands-on learning</h3>
+            <p>The skills reviews mention are concrete ones: eating, early writing, and reading.</p>
+          </article>
+          <article class="card">
+            <h3>Time to settle</h3>
+            <p>An unhurried day in a house of twelve. Children get a stretch of play and practice instead of a bell every few minutes.</p>
+          </article>
+          <article class="card">
+            <h3>Mixed-age group</h3>
+            <p>Infants, toddlers, preschoolers, and school-age children share one home, which is the mixed-age idea in her actual listing.</p>
+          </article>
+          <article class="card">
+            <h3>Room to grow</h3>
+            <p>Families talk about children leaving ready for the next classroom, at the pace the child actually has.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="program">
+      <div class="wrap">
+        <div class="center">
+          <h2>Childcare program</h2>
+          <p class="subhead">Infants through school age, in one house</p>
+        </div>
+        <article class="program">
+          <div>
+            <h3>Home program</h3>
+            <p>One house, four ages. Children practice real skills with the same caregiver, from the morning meal to the afternoon yard.</p>
+            <ul>
+              <li>Infants, toddlers, preschool, and school age together</li>
+              <li>Personal attention in a group of twelve</li>
+              <li>Early writing, reading, and manners</li>
+              <li>The same caregiver from drop-off to pickup</li>
+              <li>Practical life at the table: meals, tidying, and doing things for themselves</li>
+            </ul>
+          </div>
+          <div class="ages">
+            <div class="age"><b>Infants</b><span>Close care and feeding. Exact youngest age is confirmed on a call.</span></div>
+            <div class="age"><b>Toddlers</b><span>Language, movement, and the first shared routines.</span></div>
+            <div class="age"><b>Preschool</b><span>Reading, writing, and getting ready for school.</span></div>
+            <div class="age"><b>School age</b><span>Before and after school, in the same house.</span></div>
+          </div>
+        </article>
+
+        <h2 style="margin-top:3rem">A day in the house</h2>
+        <p class="prose">Learning, meals, outdoor time, enrichment, and rest, inside her real hours of 7:30 a.m. to 5:30 p.m. She has not posted this clock. Treat it as a sample.</p>
+        <ol class="clock">
+          <li><time>7:30</time><div><strong>Arrival</strong><span>Free play as the house fills.</span></div></li>
+          <li><time>8:15</time><div><strong>Breakfast</strong><span>A sit-down start to the morning.</span></div></li>
+          <li><time>9:00</time><div><strong>Learning</strong><span>Reading, writing, songs, and hands-on play.</span></div></li>
+          <li><time>10:15</time><div><strong>Outside</strong><span>Fresh air and movement in the yard.</span></div></li>
+          <li><time>11:30</time><div><strong>Lunch</strong><span>A meal together.</span></div></li>
+          <li><time>12:15</time><div><strong>Rest</strong><span>Quiet time. Older children can read.</span></div></li>
+          <li><time>2:30</time><div><strong>Enrichment</strong><span>Art, music, or practical life after rest.</span></div></li>
+          <li><time>3:30</time><div><strong>Afternoon</strong><span>Homework for school-age children, play for younger ones.</span></div></li>
+          <li><time>4:30</time><div><strong>Wind-down</strong><span>A story and a tidy-up.</span></div></li>
+          <li><time>5:30</time><div><strong>Pickup</strong><span>The house closes.</span></div></li>
+        </ol>
+        <p class="credit">Sample day, not a posted schedule. Confirm meals and the clock when you visit.</p>
+      </div>
+    </section>
+
+    <section id="tuition">
+      <div class="wrap">
+        <div class="center">
+          <h2>Simple, clear pricing</h2>
+          <p class="subhead">Full-time, Monday through Friday. No rate is published yet.</p>
+          <p class="prose">Her listings name one day: 7:30 a.m. to 5:30 p.m. A shorter day or fewer days a week, if she offers them, are sorted out on a tour.</p>
+        </div>
+        <div class="rates">
+          <article class="price">
+            <h3>Full day</h3>
+            <p class="when">7:30 a.m. – 5:30 p.m.</p>
+            <p class="amount">Ask</p>
+            <p class="per">monthly rate, shared on a tour</p>
+            <ul>
+              <li>Monday–Friday, her published hours</li>
+              <li>Up to 12 children in the home</li>
+              <li>One familiar caregiver</li>
+              <li>Learning time families describe</li>
+              <li>Breakfast, snack, and lunch — ask what is served</li>
+              <li>Outdoor time, and a calm rest</li>
+            </ul>
+          </article>
+          <article class="price">
+            <h3>Half day</h3>
+            <p class="when">A shorter morning, if offered</p>
+            <p class="amount">Ask</p>
+            <p class="per">not listed on her public hours</p>
+            <ul>
+              <li>The kind of second plan a family day home often has</li>
+              <li>Bring it up on the tour</li>
+              <li>Do not assume a morning-only spot</li>
+            </ul>
+          </article>
+          <article class="price">
+            <h3>Fewer days</h3>
+            <p class="when">2-day or 3-day weeks</p>
+            <p class="amount">Ask</p>
+            <p class="per">shared on a tour, not on this page</p>
+            <ul>
+              <li>Two or three days, if a spot like that is open</li>
+              <li>A house of twelve changes quickly</li>
+              <li>Call before counting on one</li>
+            </ul>
+          </article>
+        </div>
+        <p class="note">Ask on the tour about an enrollment fee, when tuition is due, and whether the rate is based on enrollment or on days attended. Those details are not published.</p>
+      </div>
+    </section>
+
+    <section id="questions">
+      <div class="wrap center">
+        <h2>Questions families ask</h2>
+        <div class="faq">
+          <details open>
+            <summary>What ages do you take?</summary>
+            <p>Infants, toddlers, preschool, and school age. The exact youngest age is a phone call.</p>
+          </details>
+          <details>
+            <summary>What are the hours?</summary>
+            <p>Monday through Friday, 7:30 a.m. to 5:30 p.m. Closed Saturday and Sunday.</p>
+          </details>
+          <details>
+            <summary>How much is tuition?</summary>
+            <p>Not published. The monthly rate is shared when you book a tour. It can vary by age and by how many days a child comes.</p>
+          </details>
+          <details>
+            <summary>What should I ask on a tour?</summary>
+            <p>The monthly rate, whether meals are included, the youngest age she takes, and whether a part-time schedule is open.</p>
+          </details>
+          <details>
+            <summary>Is the home licensed?</summary>
+            <p>Older Texas records list child-care home #524564, first permitted in 1997. Confirm the current permit before you enroll.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="visit" style="padding-top:0">
+      <div class="wrap visit">
+        <div>
+          <h2>Ready to learn more?</h2>
+          <p>Schedule a tour or ask about availability. Come see the house before you reserve a spot.</p>
+          <a class="book" href="tel:+15122637379">Call (512) 263-7379</a>
+        </div>
+        <div class="card">
+          <h3>Soraya’s Childcare</h3>
+          <p>3012 Portola Ct, Bee Cave, TX 78738</p>
+          <p style="margin-top:0.6rem"><a href="mailto:soraya124@gmail.com">soraya124@gmail.com</a></p>
+          <p><a href="https://maps.google.com/?q=3012+Portola+Ct,+Bee+Cave,+TX+78738">Get directions</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <h3>Soraya’s Childcare</h3>
+          <p>A home daycare in Bee Cave for infants through school age. Twelve children, one house, weekdays.</p>
+        </div>
+        <div>
+          <h4>Quick links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#program">Program</a></li>
+            <li><a href="#tuition">Tuition</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>3012 Portola Ct, Bee Cave, TX<br /><a href="mailto:soraya124@gmail.com">soraya124@gmail.com</a><br /><a href="tel:+15122637379">(512) 263-7379</a></p>
+        </div>
+      </div>
+      <div class="legal">
+        <span>Soraya’s Childcare · overview preview</span>
+        <span>Last updated: October 2026</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
